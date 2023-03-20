@@ -4,6 +4,6 @@ def goodPair(nums):
         print(nums[index], nums[value])
     return good_pair
 
-
+    
 nums = [1,2,3,1,1,3]
 print(goodPair(nums))

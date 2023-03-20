@@ -5,10 +5,16 @@ def isValid(string):
         ']':'[',
         '}':'{'
     }
-    for top in string:        
-        print(top)
-    return True
+    for top in string:
+        if top in to_close:
+            if stack and stack[-1] == to_close[top]:
+                stack.pop()
+            else:
+                return False
+        else:
+            stack.append(top)
+    return True if not stack else False
 
 
-string = '()'
+string = "()[]{}"
 print(isValid(string))

@@ -3,7 +3,7 @@ def shuffle(nums, n):
         aux = nums[x]
         nums[x] = nums[n]
         nums[n] = aux
-
+        
     return nums
 
     # nums = zip(nums[:n], nums[n:])
